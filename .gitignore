@@ -5,3 +5,4 @@ __pycache__/
 .env
 .DS_Store
 data/raw/*.parquet
+INTERVIEW_CHEAT_SHEET.md
