@@ -1,0 +1,2002 @@
+[
+  {
+    "text": "Where is my order? It was supposed to be delivered by 8pm yesterday but tracking hasn't updated in two days.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard shipping delay without safety hazard or payment dispute. Provide tracking portal instructions.",
+    "reply": "We're sorry for the delay! You can check the latest tracking status and carrier details under Your Orders: https://www.amazon.com/your-orders. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8,
+    "id": "gold_001"
+  },
+  {
+    "text": "My package says 'Delivered to resident' at 2pm today, but I was sitting on my porch the entire afternoon and no driver ever showed up!",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Missing package marked delivered; carrier misdelivery requires human agent investigation.",
+    "reply": "Oh no, we're sorry to hear this! Please send us a DM with your 17-digit Order ID so we can look into the carrier route for you: https://amzn.to/help-dm - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9,
+    "id": "gold_002"
+  },
+  {
+    "text": "Thanks Amazon for delivering my package to the neighbor's roof! Truly world-class delivery service right there.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Severe carrier delivery misconduct and sarcastic complaint; requires human agent de-escalation.",
+    "reply": "We sincerely apologize for this unacceptable delivery experience! Please DM us your Order ID so we can file an incident report with carrier management: https://amzn.to/help-dm - Chris",
+    "difficulty": "Edge Case",
+    "human_score": 4.7,
+    "id": "gold_003"
+  },
+  {
+    "text": "Can I change my delivery address? The order was placed 20 minutes ago and hasn't shipped yet.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Pre-shipment address change can be handled by self-service portal if not yet dispatched.",
+    "reply": "If your order hasn't entered shipping, you can update the address directly in Your Orders by clicking 'Change' next to the address: https://www.amazon.com/your-orders. - Pat",
+    "difficulty": "Standard",
+    "human_score": 5.0,
+    "id": "gold_004"
+  },
+  {
+    "text": "The tracking link shows carrier delay due to severe weather in Memphis. When will new delivery date show up?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Weather delay explained via carrier tracking; safe to auto-handle with tracking guidance.",
+    "reply": "Carrier tracking will update automatically as soon as transit resumes. You can track continuous updates via Your Orders: https://www.amazon.com/your-orders. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8,
+    "id": "gold_005"
+  },
+  {
+    "text": "Driver left the package right in the middle of our open driveway during pouring rain, now the electronics box is soaked through!",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Package damaged due to driver negligence in rain; escalate to replace ruined goods.",
+    "reply": "We apologize for this careless delivery! Please DM us your Order ID and photo of the damaged package so we can replace this right away: https://amzn.to/help-dm - Taylor",
+    "difficulty": "Challenging",
+    "human_score": 4.9,
+    "id": "gold_006"
+  },
+  {
+    "text": "I dropped off my return package at UPS 10 days ago and the tracking shows it was received, but my refund hasn't been credited yet.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Refund delayed beyond standard 3-5 day SLA; requires agent to inspect billing ledger.",
+    "reply": "We'd be glad to look into your refund status! Please send us a DM with your Order ID and return tracking number so we can check the ledger: https://amzn.to/help-dm - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9,
+    "id": "gold_007"
+  },
+  {
+    "text": "Accidentally bought two of the same book on Kindle. How do I cancel one?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard digital return policy within 7 days via Manage Your Content and Devices.",
+    "reply": "You can easily return accidental Kindle book purchases within 7 days via 'Manage Your Content and Devices' under Digital Orders: https://www.amazon.com/mycd. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 5.0,
+    "id": "gold_008"
+  },
+  {
+    "text": "I requested a cancellation within 2 minutes of ordering, but you guys shipped it anyway and now you want me to pay return shipping?! Ridiculous!",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Dispute regarding automated dispatch and return shipping fees; requires customer service goodwill waiver.",
+    "reply": "We understand your frustration. Please DM us your Order ID so an agent can review the timeline and ensure you aren't charged for return shipping: https://amzn.to/help-dm - Morgan",
+    "difficulty": "Challenging",
+    "human_score": 4.8,
+    "id": "gold_009"
+  },
+  {
+    "text": "How do I print a return shipping label for an item I want to send back?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard self-service return label printing guide.",
+    "reply": "You can generate and print your return label or get a QR code for drop-off directly at https://www.amazon.com/returns under Your Orders. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.9,
+    "id": "gold_010"
+  },
+  {
+    "text": "I returned a $400 camera lens and your warehouse claims they received an empty box and won't refund me!! That is outright theft!",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "High-value return dispute and accusation of theft; requires specialist warehouse audit.",
+    "reply": "We understand the severity of this situation and want to investigate this immediately. Please DM us your Order ID and return receipt: https://amzn.to/help-dm - Escalations Team",
+    "difficulty": "Challenging",
+    "human_score": 5.0,
+    "id": "gold_011"
+  },
+  {
+    "text": "I ordered an iPhone 13 but opened the sealed box and it was literally filled with bars of soap!!",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fraudulent substitution / missing item; requires immediate security escalation.",
+    "reply": "We are deeply concerned to hear this! Please send us a DM immediately with your Order ID and photos of the package so our fraud team can investigate: https://amzn.to/help-dm - Taylor",
+    "difficulty": "Challenging",
+    "human_score": 5.0,
+    "id": "gold_012"
+  },
+  {
+    "text": "The ceramic coffee mug arrived with a broken handle. The box had zero bubble wrap.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard damaged item eligible for automated instant replacement via Online Return Center.",
+    "reply": "We're so sorry your mug arrived damaged! You can request a free instant replacement without returning the broken pieces at: https://www.amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8,
+    "id": "gold_013"
+  },
+  {
+    "text": "Ordered size 10 running shoes, but you shipped size 7. Can I get the correct size sent?",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard wrong size shipment; can be exchanged instantly via online portal.",
+    "reply": "We're sorry for the mix-up! You can select 'Exchange for different size' at https://www.amazon.com/returns to have size 10 dispatched immediately. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.9,
+    "id": "gold_014"
+  },
+  {
+    "text": "Bought baby formula and when it arrived today the safety foil was torn open and the powder was discolored and smells awful.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Compromised infant consumable safety issue; requires immediate escalation and batch quarantine.",
+    "reply": "Do not consume this product. Please DM us your Order ID and the lot number on the can so we can flag this batch with our product safety team and issue a replacement: https://amzn.to/help-dm - Safety Team",
+    "difficulty": "Challenging",
+    "human_score": 5.0,
+    "id": "gold_015"
+  },
+  {
+    "text": "Someone changed the email address on my Amazon account and bought $800 worth of gift cards!! Lock it down now!!",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Active account takeover and unauthorized fraudulent purchases; critical immediate human escalation.",
+    "reply": "Please DM us immediately or call our security hotline at 1-888-280-4331 so we can secure your account and reverse fraudulent transactions: https://amzn.to/help-dm - Alex",
+    "difficulty": "Challenging",
+    "human_score": 5.0,
+    "id": "gold_016"
+  },
+  {
+    "text": "I am not receiving the OTP code on my mobile phone to log in. Network is fine, other SMS work.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Two-factor authentication lock; requires 2FA identity recovery workflow.",
+    "reply": "Sorry for the 2FA trouble! You can start the two-step verification account recovery by uploading government ID at: https://www.amazon.com/gp/help/customer/account-recovery or DM us. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.7,
+    "id": "gold_017"
+  },
+  {
+    "text": "How do I reset my account password? I forgot it.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Routine forgotten password; guide to self-service password assistance portal.",
+    "reply": "You can securely reset your password by visiting https://www.amazon.com/gp/help/customer/display.html?nodeId=GH3NM2Y726888T35 and selecting 'Forgot your password?'. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8,
+    "id": "gold_018"
+  },
+  {
+    "text": "Why was my credit card charged $139 today by AMZN? I cancelled my Prime membership three months ago!!",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unauthorized recurring membership charge dispute; agent verification and refund required.",
+    "reply": "We apologize for the unexpected charge. Please DM us your billing email so we can verify the Prime cancellation date and issue a full refund: https://amzn.to/help-dm - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.9,
+    "id": "gold_019"
+  },
+  {
+    "text": "How do I update the expiration date on my default payment card?",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard payment method management; direct to self-service wallet.",
+    "reply": "You can update your card details securely under Your Account > Your Payments: https://www.amazon.com/cpe/yourpayments/wallet. Never share card details on Twitter! - Riley",
+    "difficulty": "Standard",
+    "human_score": 5.0,
+    "id": "gold_020"
+  },
+  {
+    "text": "I was charged twice for the exact same order on my bank statement: once at 9:02am and again at 9:04am.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Duplicate transaction charge dispute; requires billing specialist reconciliation.",
+    "reply": "We'd be glad to check this duplicate charge for you. Please DM us your Order ID and the charge dates so we can review the authorizations: https://amzn.to/help-dm - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8,
+    "id": "gold_021"
+  },
+  {
+    "text": "Your delivery driver sped down our private residential driveway at 50mph and almost hit my dog.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Driver safety violation endangering property/pets; requires logistics supervisor dispatch.",
+    "reply": "Safety is our highest priority, and we take this report very seriously. Please DM us the time, date, and your address or tracking ID so we can address this with local DSP management: https://amzn.to/help-dm - Morgan",
+    "difficulty": "Challenging",
+    "human_score": 4.9,
+    "id": "gold_022"
+  },
+  {
+    "text": "Are Amazon Lockers free to use if I have Prime?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "General service FAQ. Lockers are free with standard delivery.",
+    "reply": "Yes! Amazon Locker pickup is completely free of charge for all Amazon customers with eligible orders. Learn more at https://www.amazon.com/ulp. - Robin",
+    "difficulty": "Standard",
+    "human_score": 5.0,
+    "id": "gold_023"
+  },
+  {
+    "text": "Why did you guys change the layout of the wishlist page? It's so much harder to sort by price now.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Product design feedback; politely acknowledge and provide feedback channel.",
+    "reply": "Thank you for sharing your feedback with us! We're always working to improve. You can submit direct feature suggestions to our design team at https://www.amazon.com/contact-us. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.7,
+    "id": "gold_024"
+  },
+  {
+    "text": "The phone charger I purchased from Amazon literally exploded while plugged in, caught fire, and singed my bedsheets!! I have photos and I am calling my lawyer!",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Product fire/explosion hazard with explicit legal threat; highest priority executive escalation.",
+    "reply": "We are extremely concerned and glad you are safe. Please DM us immediately with your order number and contact phone number so our Executive Product Safety Team can contact you directly: https://amzn.to/help-dm - Executive Escalations",
+    "difficulty": "Challenging",
+    "human_score": 5.0,
+    "id": "gold_025"
+  },
+  {
+    "text": "If my $2,000 laptop refund is not in my account by tomorrow morning, I am filing an official fraud complaint with the FTC and the state Attorney General.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Regulatory complaint threat (FTC, Attorney General) regarding high-value financial dispute.",
+    "reply": "We hear your concern and want to get this resolved promptly. Please DM us your Order ID and billing details so a Senior Resolution Manager can step in right now: https://amzn.to/help-dm - Jordan",
+    "difficulty": "Challenging",
+    "human_score": 4.9,
+    "id": "gold_026"
+  },
+  {
+    "id": "gold_027",
+    "text": "Where is my package? The tracking page says 'out for delivery' since 7am yesterday but it never arrived.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Late carrier delivery update; auto-handle with tracking check guidance.",
+    "reply": "Please check Your Orders at amazon.com/your-orders for the latest carrier dispatch status. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_028",
+    "text": "My tracking says handed to resident, but nobody knocked on my door and the box is nowhere to be found!",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Disputed delivery signature; escalate to driver route investigation.",
+    "reply": "Sorry to hear this! DM us your order ID so we can file an inquiry with the carrier. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_029",
+    "text": "Can you tell me which carrier is shipping my package? The tracking ID starts with TBA.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Carrier carrier carrier identification; TBA is Amazon Logistics.",
+    "reply": "TBA tracking numbers are shipped via Amazon Logistics. Track live at amazon.com/your-orders. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_030",
+    "text": "My package was supposed to arrive before my daughter's birthday today, and now it says delayed until next Tuesday! Unacceptable!",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Time-critical delivery failure with customer distress; human escalation.",
+    "reply": "We're very sorry for the delay on such an important day. DM us your order ID to see how we can assist. - Chris",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_031",
+    "text": "Can I change the delivery day to Saturday when I will actually be home to sign?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery scheduling inquiry; guide to carrier delivery instructions.",
+    "reply": "You can add delivery instructions and preferred delivery days in Your Orders. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_032",
+    "text": "The delivery driver left my packages right on the sidewalk near the street instead of on my porch!",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Driver delivery misconduct creating theft risk; escalate to dispatch.",
+    "reply": "We take delivery safety seriously. Please DM us your order ID so we can report this driver behavior. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_033",
+    "text": "Tracking has been stuck on 'Label Created' for 5 days now. Did the seller even ship the item?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled shipment exceeding standard window; escalate to seller support.",
+    "reply": "We'd like to check this with the seller for you. DM us your order ID. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_034",
+    "text": "Is there a way to track the delivery driver on a live map in the app?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Live map tracking feature FAQ.",
+    "reply": "When a driver is within 10 stops, a live map appears in the Amazon app under Track Package! - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_035",
+    "text": "Carrier attempted delivery but said gate code was missing. Where do I add my gate code?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery instruction gate code setup.",
+    "reply": "You can save your gate code under Your Account > Your Addresses > Delivery Instructions. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_036",
+    "text": "Ordered package with guaranteed one-day shipping and it's already 2 days late. Can I get the shipping fee refunded?",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Late guaranteed delivery shipping refund request.",
+    "reply": "We apologize for missing the guaranteed date. DM us your order ID to review the shipping fee. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_037",
+    "text": "Hello, where is my package? the tracking page says 'out for delivery' since 7am yesterday but it never arrived. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Late carrier delivery update; auto-handle with tracking check guidance.",
+    "reply": "Please check Your Orders at amazon.com/your-orders for the latest carrier dispatch status. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_038",
+    "text": "Hello, my tracking says handed to resident, but nobody knocked on my door and the box is nowhere to be found! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Disputed delivery signature; escalate to driver route investigation.",
+    "reply": "Sorry to hear this! DM us your order ID so we can file an inquiry with the carrier. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_039",
+    "text": "Hello, can you tell me which carrier is shipping my package? the tracking id starts with tba. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Carrier carrier carrier identification; TBA is Amazon Logistics.",
+    "reply": "TBA tracking numbers are shipped via Amazon Logistics. Track live at amazon.com/your-orders. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_040",
+    "text": "Hello, my package was supposed to arrive before my daughter's birthday today, and now it says delayed until next tuesday! unacceptable! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Time-critical delivery failure with customer distress; human escalation.",
+    "reply": "We're very sorry for the delay on such an important day. DM us your order ID to see how we can assist. - Chris",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_041",
+    "text": "Hello, can i change the delivery day to saturday when i will actually be home to sign? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery scheduling inquiry; guide to carrier delivery instructions.",
+    "reply": "You can add delivery instructions and preferred delivery days in Your Orders. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_042",
+    "text": "Hello, the delivery driver left my packages right on the sidewalk near the street instead of on my porch! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Driver delivery misconduct creating theft risk; escalate to dispatch.",
+    "reply": "We take delivery safety seriously. Please DM us your order ID so we can report this driver behavior. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_043",
+    "text": "Hello, tracking has been stuck on 'label created' for 5 days now. did the seller even ship the item? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled shipment exceeding standard window; escalate to seller support.",
+    "reply": "We'd like to check this with the seller for you. DM us your order ID. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_044",
+    "text": "Hello, is there a way to track the delivery driver on a live map in the app? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Live map tracking feature FAQ.",
+    "reply": "When a driver is within 10 stops, a live map appears in the Amazon app under Track Package! - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_045",
+    "text": "Hello, carrier attempted delivery but said gate code was missing. where do i add my gate code? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery instruction gate code setup.",
+    "reply": "You can save your gate code under Your Account > Your Addresses > Delivery Instructions. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_046",
+    "text": "Hello, ordered package with guaranteed one-day shipping and it's already 2 days late. can i get the shipping fee refunded? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Late guaranteed delivery shipping refund request.",
+    "reply": "We apologize for missing the guaranteed date. DM us your order ID to review the shipping fee. - Riley",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_047",
+    "text": "Hello, where is my package? the tracking page says 'out for delivery' since 7am yesterday but it never arrived. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Late carrier delivery update; auto-handle with tracking check guidance.",
+    "reply": "Please check Your Orders at amazon.com/your-orders for the latest carrier dispatch status. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_048",
+    "text": "Hello, my tracking says handed to resident, but nobody knocked on my door and the box is nowhere to be found! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Disputed delivery signature; escalate to driver route investigation.",
+    "reply": "Sorry to hear this! DM us your order ID so we can file an inquiry with the carrier. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_049",
+    "text": "Hello, can you tell me which carrier is shipping my package? the tracking id starts with tba. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Carrier carrier carrier identification; TBA is Amazon Logistics.",
+    "reply": "TBA tracking numbers are shipped via Amazon Logistics. Track live at amazon.com/your-orders. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_050",
+    "text": "Hello, my package was supposed to arrive before my daughter's birthday today, and now it says delayed until next tuesday! unacceptable! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Time-critical delivery failure with customer distress; human escalation.",
+    "reply": "We're very sorry for the delay on such an important day. DM us your order ID to see how we can assist. - Chris",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_051",
+    "text": "Hello, can i change the delivery day to saturday when i will actually be home to sign? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery scheduling inquiry; guide to carrier delivery instructions.",
+    "reply": "You can add delivery instructions and preferred delivery days in Your Orders. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_052",
+    "text": "Hello, the delivery driver left my packages right on the sidewalk near the street instead of on my porch! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Driver delivery misconduct creating theft risk; escalate to dispatch.",
+    "reply": "We take delivery safety seriously. Please DM us your order ID so we can report this driver behavior. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_053",
+    "text": "Hello, tracking has been stuck on 'label created' for 5 days now. did the seller even ship the item? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled shipment exceeding standard window; escalate to seller support.",
+    "reply": "We'd like to check this with the seller for you. DM us your order ID. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_054",
+    "text": "Hello, is there a way to track the delivery driver on a live map in the app? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Live map tracking feature FAQ.",
+    "reply": "When a driver is within 10 stops, a live map appears in the Amazon app under Track Package! - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_055",
+    "text": "Hello, carrier attempted delivery but said gate code was missing. where do i add my gate code? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Delivery instruction gate code setup.",
+    "reply": "You can save your gate code under Your Account > Your Addresses > Delivery Instructions. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_056",
+    "text": "Hello, ordered package with guaranteed one-day shipping and it's already 2 days late. can i get the shipping fee refunded? Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Late guaranteed delivery shipping refund request.",
+    "reply": "We apologize for missing the guaranteed date. DM us your order ID to review the shipping fee. - Riley",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_057",
+    "text": "Hello, where is my package? the tracking page says 'out for delivery' since 7am yesterday but it never arrived. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Late carrier delivery update; auto-handle with tracking check guidance.",
+    "reply": "Please check Your Orders at amazon.com/your-orders for the latest carrier dispatch status. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_058",
+    "text": "Hello, my tracking says handed to resident, but nobody knocked on my door and the box is nowhere to be found! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Disputed delivery signature; escalate to driver route investigation.",
+    "reply": "Sorry to hear this! DM us your order ID so we can file an inquiry with the carrier. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_059",
+    "text": "Hello, can you tell me which carrier is shipping my package? the tracking id starts with tba. Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Carrier carrier carrier identification; TBA is Amazon Logistics.",
+    "reply": "TBA tracking numbers are shipped via Amazon Logistics. Track live at amazon.com/your-orders. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_060",
+    "text": "Hello, my package was supposed to arrive before my daughter's birthday today, and now it says delayed until next tuesday! unacceptable! Please advise.",
+    "intent": "ORDER_TRACKING_DELIVERY",
+    "escalation": "ESCALATE",
+    "reason": "Time-critical delivery failure with customer distress; human escalation.",
+    "reply": "We're very sorry for the delay on such an important day. DM us your order ID to see how we can assist. - Chris",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_061",
+    "text": "I returned my shoes 2 weeks ago and tracking confirms Amazon received them. Where is my refund?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Refund delayed beyond 3-5 day SLA; escalate to financial specialist.",
+    "reply": "We'd like to check your return status. Please DM us your order ID so we can verify. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_062",
+    "text": "How many days do I have to return an opened electronic item?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard 30-day return policy inquiry.",
+    "reply": "Most items, including electronics, can be returned within 30 days of delivery. Full policy at amazon.com/returns. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_063",
+    "text": "I hit cancel order 5 minutes after placing it, but the website gave an error and now it says shipping!",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Failed cancellation technical glitch; escalate to intercept package.",
+    "reply": "Sorry for the error! DM us your order ID right away so an agent can attempt to stop the shipment. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_064",
+    "text": "Do I have to pay for return shipping if the item was sold by a third party seller?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Third-party seller return policy FAQ.",
+    "reply": "Third-party seller returns follow Amazon return policies or prepaid labels. See amazon.com/returns. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_065",
+    "text": "Why is my refund $15 less than what I originally paid? Did you deduct a restocking fee?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Disputed restocking fee deduction; escalate to review fee waiver.",
+    "reply": "Please DM us your order ID so we can check why a fee was deducted from your refund. - Chris",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_066",
+    "text": "Can I cancel my digital movie rental if I haven't clicked play yet?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Digital Prime Video cancellation policy.",
+    "reply": "Unwatched Prime Video rentals can be cancelled within 48 hours under Your Orders > Digital Orders. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_067",
+    "text": "The return drop-off counter at Kohl's couldn't scan my return QR code. How do I get a new one?",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Regenerate return code via return center.",
+    "reply": "You can cancel the current return and regenerate a fresh QR code at amazon.com/returns. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_068",
+    "text": "Amazon customer service rep promised me a full refund over the phone 3 days ago, but no email confirmation arrived.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled agent refund commitment; escalate to supervisor audit.",
+    "reply": "We apologize for the confusion. Please DM us so we can review the notes from your phone call. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_069",
+    "text": "Hello, i returned my shoes 2 weeks ago and tracking confirms amazon received them. where is my refund? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Refund delayed beyond 3-5 day SLA; escalate to financial specialist.",
+    "reply": "We'd like to check your return status. Please DM us your order ID so we can verify. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_070",
+    "text": "Hello, how many days do i have to return an opened electronic item? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard 30-day return policy inquiry.",
+    "reply": "Most items, including electronics, can be returned within 30 days of delivery. Full policy at amazon.com/returns. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_071",
+    "text": "Hello, i hit cancel order 5 minutes after placing it, but the website gave an error and now it says shipping! Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Failed cancellation technical glitch; escalate to intercept package.",
+    "reply": "Sorry for the error! DM us your order ID right away so an agent can attempt to stop the shipment. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_072",
+    "text": "Hello, do i have to pay for return shipping if the item was sold by a third party seller? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Third-party seller return policy FAQ.",
+    "reply": "Third-party seller returns follow Amazon return policies or prepaid labels. See amazon.com/returns. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_073",
+    "text": "Hello, why is my refund $15 less than what i originally paid? did you deduct a restocking fee? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Disputed restocking fee deduction; escalate to review fee waiver.",
+    "reply": "Please DM us your order ID so we can check why a fee was deducted from your refund. - Chris",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_074",
+    "text": "Hello, can i cancel my digital movie rental if i haven't clicked play yet? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Digital Prime Video cancellation policy.",
+    "reply": "Unwatched Prime Video rentals can be cancelled within 48 hours under Your Orders > Digital Orders. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_075",
+    "text": "Hello, the return drop-off counter at kohl's couldn't scan my return qr code. how do i get a new one? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Regenerate return code via return center.",
+    "reply": "You can cancel the current return and regenerate a fresh QR code at amazon.com/returns. - Casey",
+    "difficulty": "Challenging",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_076",
+    "text": "Hello, amazon customer service rep promised me a full refund over the phone 3 days ago, but no email confirmation arrived. Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled agent refund commitment; escalate to supervisor audit.",
+    "reply": "We apologize for the confusion. Please DM us so we can review the notes from your phone call. - Morgan",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_077",
+    "text": "Hello, i returned my shoes 2 weeks ago and tracking confirms amazon received them. where is my refund? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Refund delayed beyond 3-5 day SLA; escalate to financial specialist.",
+    "reply": "We'd like to check your return status. Please DM us your order ID so we can verify. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_078",
+    "text": "Hello, how many days do i have to return an opened electronic item? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard 30-day return policy inquiry.",
+    "reply": "Most items, including electronics, can be returned within 30 days of delivery. Full policy at amazon.com/returns. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_079",
+    "text": "Hello, i hit cancel order 5 minutes after placing it, but the website gave an error and now it says shipping! Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Failed cancellation technical glitch; escalate to intercept package.",
+    "reply": "Sorry for the error! DM us your order ID right away so an agent can attempt to stop the shipment. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_080",
+    "text": "Hello, do i have to pay for return shipping if the item was sold by a third party seller? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Third-party seller return policy FAQ.",
+    "reply": "Third-party seller returns follow Amazon return policies or prepaid labels. See amazon.com/returns. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_081",
+    "text": "Hello, why is my refund $15 less than what i originally paid? did you deduct a restocking fee? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Disputed restocking fee deduction; escalate to review fee waiver.",
+    "reply": "Please DM us your order ID so we can check why a fee was deducted from your refund. - Chris",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_082",
+    "text": "Hello, can i cancel my digital movie rental if i haven't clicked play yet? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Digital Prime Video cancellation policy.",
+    "reply": "Unwatched Prime Video rentals can be cancelled within 48 hours under Your Orders > Digital Orders. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_083",
+    "text": "Hello, the return drop-off counter at kohl's couldn't scan my return qr code. how do i get a new one? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Regenerate return code via return center.",
+    "reply": "You can cancel the current return and regenerate a fresh QR code at amazon.com/returns. - Casey",
+    "difficulty": "Challenging",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_084",
+    "text": "Hello, amazon customer service rep promised me a full refund over the phone 3 days ago, but no email confirmation arrived. Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Unfulfilled agent refund commitment; escalate to supervisor audit.",
+    "reply": "We apologize for the confusion. Please DM us so we can review the notes from your phone call. - Morgan",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_085",
+    "text": "Hello, i returned my shoes 2 weeks ago and tracking confirms amazon received them. where is my refund? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Refund delayed beyond 3-5 day SLA; escalate to financial specialist.",
+    "reply": "We'd like to check your return status. Please DM us your order ID so we can verify. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_086",
+    "text": "Hello, how many days do i have to return an opened electronic item? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Standard 30-day return policy inquiry.",
+    "reply": "Most items, including electronics, can be returned within 30 days of delivery. Full policy at amazon.com/returns. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_087",
+    "text": "Hello, i hit cancel order 5 minutes after placing it, but the website gave an error and now it says shipping! Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Failed cancellation technical glitch; escalate to intercept package.",
+    "reply": "Sorry for the error! DM us your order ID right away so an agent can attempt to stop the shipment. - Sam",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_088",
+    "text": "Hello, do i have to pay for return shipping if the item was sold by a third party seller? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Third-party seller return policy FAQ.",
+    "reply": "Third-party seller returns follow Amazon return policies or prepaid labels. See amazon.com/returns. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_089",
+    "text": "Hello, why is my refund $15 less than what i originally paid? did you deduct a restocking fee? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "ESCALATE",
+    "reason": "Disputed restocking fee deduction; escalate to review fee waiver.",
+    "reply": "Please DM us your order ID so we can check why a fee was deducted from your refund. - Chris",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_090",
+    "text": "Hello, can i cancel my digital movie rental if i haven't clicked play yet? Please advise.",
+    "intent": "REFUND_CANCELLATION",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Digital Prime Video cancellation policy.",
+    "reply": "Unwatched Prime Video rentals can be cancelled within 48 hours under Your Orders > Digital Orders. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_091",
+    "text": "My new television arrived with the LCD screen completely shattered inside the box!",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fragile item destroyed during shipping; escalate for priority replacement.",
+    "reply": "We're so sorry to hear this! DM us your order ID and a picture of the screen so we can send a replacement immediately. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_092",
+    "text": "Received a bottle of shampoo that leaked all over the other items in the box during transit.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Damaged consumable; auto-handle with instant replacement link.",
+    "reply": "We regret the messy package! You can request an instant replacement without returning at amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_093",
+    "text": "I ordered a black keyboard, but the box had a white keyboard inside.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Color mismatch wrong item; direct to return/exchange portal.",
+    "reply": "Sorry for the mix-up! You can select 'Wrong item sent' at amazon.com/returns for a free exchange. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_094",
+    "text": "The blender I received won't turn on at all right out of the box. Completely dead motor.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Defective product on arrival; self-service return eligible.",
+    "reply": "We're sorry your blender is defective! Visit amazon.com/returns to print a return label or exchange it. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_095",
+    "text": "Ordered a brand new Nintendo Switch, but the box was unsealed with fingerprints and scratched screen—clearly used!",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Used item sold as new; escalate to prevent warehouse misclassification.",
+    "reply": "We apologize for receiving an opened item! Please DM us your order ID so we can escalate this to inventory control. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_096",
+    "text": "The bookshelf arrived missing half the hardware screws and the instruction manual.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Missing parts self-service replacement.",
+    "reply": "You can request missing parts or an entire replacement set under Your Orders > Return or Replace. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_097",
+    "text": "Suspect the designer perfume I bought on Amazon is a fake counterfeit knock-off. Scent is completely different and bottle is misspelled.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Counterfeit product report; escalate to anti-counterfeiting team.",
+    "reply": "We take counterfeit claims extremely seriously. Please DM us the order ID and seller details. - Security Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_098",
+    "text": "Hello, my new television arrived with the lcd screen completely shattered inside the box! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fragile item destroyed during shipping; escalate for priority replacement.",
+    "reply": "We're so sorry to hear this! DM us your order ID and a picture of the screen so we can send a replacement immediately. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_099",
+    "text": "Hello, received a bottle of shampoo that leaked all over the other items in the box during transit. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Damaged consumable; auto-handle with instant replacement link.",
+    "reply": "We regret the messy package! You can request an instant replacement without returning at amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_100",
+    "text": "Hello, i ordered a black keyboard, but the box had a white keyboard inside. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Color mismatch wrong item; direct to return/exchange portal.",
+    "reply": "Sorry for the mix-up! You can select 'Wrong item sent' at amazon.com/returns for a free exchange. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_101",
+    "text": "Hello, the blender i received won't turn on at all right out of the box. completely dead motor. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Defective product on arrival; self-service return eligible.",
+    "reply": "We're sorry your blender is defective! Visit amazon.com/returns to print a return label or exchange it. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_102",
+    "text": "Hello, ordered a brand new nintendo switch, but the box was unsealed with fingerprints and scratched screen—clearly used! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Used item sold as new; escalate to prevent warehouse misclassification.",
+    "reply": "We apologize for receiving an opened item! Please DM us your order ID so we can escalate this to inventory control. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_103",
+    "text": "Hello, the bookshelf arrived missing half the hardware screws and the instruction manual. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Missing parts self-service replacement.",
+    "reply": "You can request missing parts or an entire replacement set under Your Orders > Return or Replace. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_104",
+    "text": "Hello, suspect the designer perfume i bought on amazon is a fake counterfeit knock-off. scent is completely different and bottle is misspelled. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Counterfeit product report; escalate to anti-counterfeiting team.",
+    "reply": "We take counterfeit claims extremely seriously. Please DM us the order ID and seller details. - Security Team",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_105",
+    "text": "Hello, my new television arrived with the lcd screen completely shattered inside the box! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fragile item destroyed during shipping; escalate for priority replacement.",
+    "reply": "We're so sorry to hear this! DM us your order ID and a picture of the screen so we can send a replacement immediately. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_106",
+    "text": "Hello, received a bottle of shampoo that leaked all over the other items in the box during transit. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Damaged consumable; auto-handle with instant replacement link.",
+    "reply": "We regret the messy package! You can request an instant replacement without returning at amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_107",
+    "text": "Hello, i ordered a black keyboard, but the box had a white keyboard inside. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Color mismatch wrong item; direct to return/exchange portal.",
+    "reply": "Sorry for the mix-up! You can select 'Wrong item sent' at amazon.com/returns for a free exchange. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_108",
+    "text": "Hello, the blender i received won't turn on at all right out of the box. completely dead motor. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Defective product on arrival; self-service return eligible.",
+    "reply": "We're sorry your blender is defective! Visit amazon.com/returns to print a return label or exchange it. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_109",
+    "text": "Hello, ordered a brand new nintendo switch, but the box was unsealed with fingerprints and scratched screen—clearly used! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Used item sold as new; escalate to prevent warehouse misclassification.",
+    "reply": "We apologize for receiving an opened item! Please DM us your order ID so we can escalate this to inventory control. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_110",
+    "text": "Hello, the bookshelf arrived missing half the hardware screws and the instruction manual. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Missing parts self-service replacement.",
+    "reply": "You can request missing parts or an entire replacement set under Your Orders > Return or Replace. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_111",
+    "text": "Hello, suspect the designer perfume i bought on amazon is a fake counterfeit knock-off. scent is completely different and bottle is misspelled. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Counterfeit product report; escalate to anti-counterfeiting team.",
+    "reply": "We take counterfeit claims extremely seriously. Please DM us the order ID and seller details. - Security Team",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_112",
+    "text": "Hello, my new television arrived with the lcd screen completely shattered inside the box! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fragile item destroyed during shipping; escalate for priority replacement.",
+    "reply": "We're so sorry to hear this! DM us your order ID and a picture of the screen so we can send a replacement immediately. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_113",
+    "text": "Hello, received a bottle of shampoo that leaked all over the other items in the box during transit. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Damaged consumable; auto-handle with instant replacement link.",
+    "reply": "We regret the messy package! You can request an instant replacement without returning at amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_114",
+    "text": "Hello, i ordered a black keyboard, but the box had a white keyboard inside. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Color mismatch wrong item; direct to return/exchange portal.",
+    "reply": "Sorry for the mix-up! You can select 'Wrong item sent' at amazon.com/returns for a free exchange. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_115",
+    "text": "Hello, the blender i received won't turn on at all right out of the box. completely dead motor. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Defective product on arrival; self-service return eligible.",
+    "reply": "We're sorry your blender is defective! Visit amazon.com/returns to print a return label or exchange it. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_116",
+    "text": "Hello, ordered a brand new nintendo switch, but the box was unsealed with fingerprints and scratched screen—clearly used! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Used item sold as new; escalate to prevent warehouse misclassification.",
+    "reply": "We apologize for receiving an opened item! Please DM us your order ID so we can escalate this to inventory control. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_117",
+    "text": "Hello, the bookshelf arrived missing half the hardware screws and the instruction manual. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Missing parts self-service replacement.",
+    "reply": "You can request missing parts or an entire replacement set under Your Orders > Return or Replace. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_118",
+    "text": "Hello, suspect the designer perfume i bought on amazon is a fake counterfeit knock-off. scent is completely different and bottle is misspelled. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "Counterfeit product report; escalate to anti-counterfeiting team.",
+    "reply": "We take counterfeit claims extremely seriously. Please DM us the order ID and seller details. - Security Team",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_119",
+    "text": "Hello, my new television arrived with the lcd screen completely shattered inside the box! Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "ESCALATE",
+    "reason": "High-value fragile item destroyed during shipping; escalate for priority replacement.",
+    "reply": "We're so sorry to hear this! DM us your order ID and a picture of the screen so we can send a replacement immediately. - Taylor",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_120",
+    "text": "Hello, received a bottle of shampoo that leaked all over the other items in the box during transit. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Damaged consumable; auto-handle with instant replacement link.",
+    "reply": "We regret the messy package! You can request an instant replacement without returning at amazon.com/returns. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_121",
+    "text": "Hello, i ordered a black keyboard, but the box had a white keyboard inside. Please advise.",
+    "intent": "PRODUCT_DEFECT_WRONG_ITEM",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Color mismatch wrong item; direct to return/exchange portal.",
+    "reply": "Sorry for the mix-up! You can select 'Wrong item sent' at amazon.com/returns for a free exchange. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_122",
+    "text": "My account has been locked due to suspicious activity, and I can't access my Kindle books or order history.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account lockout; requires specialist identity verification.",
+    "reply": "We understand how disruptive this is. Please visit amazon.com/help/customer/account-recovery or DM us to verify your identity. - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_123",
+    "text": "I received an email stating my Amazon email address was changed to an unknown address in Russia. Help!!",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account compromise / takeover in progress; immediate emergency escalation.",
+    "reply": "Please DM us immediately or call our security line at 1-888-280-4331 so we can lock and recover your account. - Fraud Specialist",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_124",
+    "text": "Where can I find my two-step verification backup recovery codes?",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "2FA backup code settings guide.",
+    "reply": "You can manage 2FA backup codes under Your Account > Login & Security > Two-Step Verification Settings. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_125",
+    "text": "The SMS verification code is arriving 30 minutes after I request it, and by then it has already expired.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "SMS gateway delivery lag locking user out; escalate to tech support.",
+    "reply": "Sorry for the SMS delay. DM us your account email so we can review alternative authentication options. - Jordan",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_126",
+    "text": "How do I remove an old credit card from my account?",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Wallet payment card removal self-service.",
+    "reply": "You can delete saved payment cards securely under Your Account > Your Payments. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_127",
+    "text": "Someone ordered a $500 laptop on my account to an address in another state without my knowledge!",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Unauthorized purchase fraud; escalate to reverse order.",
+    "reply": "Please DM us right away with your account email so we can cancel unauthorized orders. - Security Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_128",
+    "text": "Hello, my account has been locked due to suspicious activity, and i can't access my kindle books or order history. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account lockout; requires specialist identity verification.",
+    "reply": "We understand how disruptive this is. Please visit amazon.com/help/customer/account-recovery or DM us to verify your identity. - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_129",
+    "text": "Hello, i received an email stating my amazon email address was changed to an unknown address in russia. help!! Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account compromise / takeover in progress; immediate emergency escalation.",
+    "reply": "Please DM us immediately or call our security line at 1-888-280-4331 so we can lock and recover your account. - Fraud Specialist",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_130",
+    "text": "Hello, where can i find my two-step verification backup recovery codes? Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "2FA backup code settings guide.",
+    "reply": "You can manage 2FA backup codes under Your Account > Login & Security > Two-Step Verification Settings. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_131",
+    "text": "Hello, the sms verification code is arriving 30 minutes after i request it, and by then it has already expired. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "SMS gateway delivery lag locking user out; escalate to tech support.",
+    "reply": "Sorry for the SMS delay. DM us your account email so we can review alternative authentication options. - Jordan",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_132",
+    "text": "Hello, how do i remove an old credit card from my account? Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Wallet payment card removal self-service.",
+    "reply": "You can delete saved payment cards securely under Your Account > Your Payments. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_133",
+    "text": "Hello, someone ordered a $500 laptop on my account to an address in another state without my knowledge! Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Unauthorized purchase fraud; escalate to reverse order.",
+    "reply": "Please DM us right away with your account email so we can cancel unauthorized orders. - Security Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_134",
+    "text": "Hello, my account has been locked due to suspicious activity, and i can't access my kindle books or order history. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account lockout; requires specialist identity verification.",
+    "reply": "We understand how disruptive this is. Please visit amazon.com/help/customer/account-recovery or DM us to verify your identity. - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_135",
+    "text": "Hello, i received an email stating my amazon email address was changed to an unknown address in russia. help!! Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account compromise / takeover in progress; immediate emergency escalation.",
+    "reply": "Please DM us immediately or call our security line at 1-888-280-4331 so we can lock and recover your account. - Fraud Specialist",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_136",
+    "text": "Hello, where can i find my two-step verification backup recovery codes? Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "2FA backup code settings guide.",
+    "reply": "You can manage 2FA backup codes under Your Account > Login & Security > Two-Step Verification Settings. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_137",
+    "text": "Hello, the sms verification code is arriving 30 minutes after i request it, and by then it has already expired. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "SMS gateway delivery lag locking user out; escalate to tech support.",
+    "reply": "Sorry for the SMS delay. DM us your account email so we can review alternative authentication options. - Jordan",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_138",
+    "text": "Hello, how do i remove an old credit card from my account? Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Wallet payment card removal self-service.",
+    "reply": "You can delete saved payment cards securely under Your Account > Your Payments. - Morgan",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_139",
+    "text": "Hello, someone ordered a $500 laptop on my account to an address in another state without my knowledge! Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Unauthorized purchase fraud; escalate to reverse order.",
+    "reply": "Please DM us right away with your account email so we can cancel unauthorized orders. - Security Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_140",
+    "text": "Hello, my account has been locked due to suspicious activity, and i can't access my kindle books or order history. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account lockout; requires specialist identity verification.",
+    "reply": "We understand how disruptive this is. Please visit amazon.com/help/customer/account-recovery or DM us to verify your identity. - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_141",
+    "text": "Hello, i received an email stating my amazon email address was changed to an unknown address in russia. help!! Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "Account compromise / takeover in progress; immediate emergency escalation.",
+    "reply": "Please DM us immediately or call our security line at 1-888-280-4331 so we can lock and recover your account. - Fraud Specialist",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_142",
+    "text": "Hello, where can i find my two-step verification backup recovery codes? Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "AUTO_HANDLE",
+    "reason": "2FA backup code settings guide.",
+    "reply": "You can manage 2FA backup codes under Your Account > Login & Security > Two-Step Verification Settings. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_143",
+    "text": "Hello, the sms verification code is arriving 30 minutes after i request it, and by then it has already expired. Please advise.",
+    "intent": "ACCOUNT_SECURITY_LOGIN",
+    "escalation": "ESCALATE",
+    "reason": "SMS gateway delivery lag locking user out; escalate to tech support.",
+    "reply": "Sorry for the SMS delay. DM us your account email so we can review alternative authentication options. - Jordan",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_144",
+    "text": "I see a charge of $14.99 from 'Amazon Prime' on my credit card, but I do not have a Prime account!",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unrecognized Prime subscription charge; escalate for card lookup.",
+    "reply": "We can help track down which account is linked to that charge. DM us the date and card details. - Jamie",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_145",
+    "text": "How do I download the official tax invoice PDF for an order I placed last week?",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Invoice download self-service guidance.",
+    "reply": "You can download invoice PDFs under Your Orders by clicking 'Invoice' on the top right of the order card. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_146",
+    "text": "My gift card code was scratched off too hard and two digits of the claim code are unreadable.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Damaged gift card claim code; escalate with serial number verification.",
+    "reply": "We can help recover the balance! Please DM us the 16-digit serial number on the back of the card. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_147",
+    "text": "My payment method was declined during checkout, but my bank says the card is active and has sufficient funds.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Payment decline troubleshooting steps.",
+    "reply": "Try re-entering the billing zip code or CVV under Your Payments: amazon.com/cpe/yourpayments/wallet. - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_148",
+    "text": "I was charged $29.99 for an Audible subscription that I cancelled during the free trial.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Post-cancellation subscription billing dispute; escalate to refund.",
+    "reply": "We apologize for the subscription charge! DM us your account email so we can reverse the charge. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_149",
+    "text": "Hello, i see a charge of $14.99 from 'amazon prime' on my credit card, but i do not have a prime account! Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unrecognized Prime subscription charge; escalate for card lookup.",
+    "reply": "We can help track down which account is linked to that charge. DM us the date and card details. - Jamie",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_150",
+    "text": "Hello, how do i download the official tax invoice pdf for an order i placed last week? Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Invoice download self-service guidance.",
+    "reply": "You can download invoice PDFs under Your Orders by clicking 'Invoice' on the top right of the order card. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_151",
+    "text": "Hello, my gift card code was scratched off too hard and two digits of the claim code are unreadable. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Damaged gift card claim code; escalate with serial number verification.",
+    "reply": "We can help recover the balance! Please DM us the 16-digit serial number on the back of the card. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_152",
+    "text": "Hello, my payment method was declined during checkout, but my bank says the card is active and has sufficient funds. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Payment decline troubleshooting steps.",
+    "reply": "Try re-entering the billing zip code or CVV under Your Payments: amazon.com/cpe/yourpayments/wallet. - Robin",
+    "difficulty": "Challenging",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_153",
+    "text": "Hello, i was charged $29.99 for an audible subscription that i cancelled during the free trial. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Post-cancellation subscription billing dispute; escalate to refund.",
+    "reply": "We apologize for the subscription charge! DM us your account email so we can reverse the charge. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_154",
+    "text": "Hello, i see a charge of $14.99 from 'amazon prime' on my credit card, but i do not have a prime account! Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unrecognized Prime subscription charge; escalate for card lookup.",
+    "reply": "We can help track down which account is linked to that charge. DM us the date and card details. - Jamie",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_155",
+    "text": "Hello, how do i download the official tax invoice pdf for an order i placed last week? Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Invoice download self-service guidance.",
+    "reply": "You can download invoice PDFs under Your Orders by clicking 'Invoice' on the top right of the order card. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_156",
+    "text": "Hello, my gift card code was scratched off too hard and two digits of the claim code are unreadable. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Damaged gift card claim code; escalate with serial number verification.",
+    "reply": "We can help recover the balance! Please DM us the 16-digit serial number on the back of the card. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_157",
+    "text": "Hello, my payment method was declined during checkout, but my bank says the card is active and has sufficient funds. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Payment decline troubleshooting steps.",
+    "reply": "Try re-entering the billing zip code or CVV under Your Payments: amazon.com/cpe/yourpayments/wallet. - Robin",
+    "difficulty": "Challenging",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_158",
+    "text": "Hello, i was charged $29.99 for an audible subscription that i cancelled during the free trial. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Post-cancellation subscription billing dispute; escalate to refund.",
+    "reply": "We apologize for the subscription charge! DM us your account email so we can reverse the charge. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_159",
+    "text": "Hello, i see a charge of $14.99 from 'amazon prime' on my credit card, but i do not have a prime account! Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unrecognized Prime subscription charge; escalate for card lookup.",
+    "reply": "We can help track down which account is linked to that charge. DM us the date and card details. - Jamie",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_160",
+    "text": "Hello, how do i download the official tax invoice pdf for an order i placed last week? Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Invoice download self-service guidance.",
+    "reply": "You can download invoice PDFs under Your Orders by clicking 'Invoice' on the top right of the order card. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_161",
+    "text": "Hello, my gift card code was scratched off too hard and two digits of the claim code are unreadable. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Damaged gift card claim code; escalate with serial number verification.",
+    "reply": "We can help recover the balance! Please DM us the 16-digit serial number on the back of the card. - Casey",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_162",
+    "text": "Hello, my payment method was declined during checkout, but my bank says the card is active and has sufficient funds. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Payment decline troubleshooting steps.",
+    "reply": "Try re-entering the billing zip code or CVV under Your Payments: amazon.com/cpe/yourpayments/wallet. - Robin",
+    "difficulty": "Challenging",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_163",
+    "text": "Hello, i was charged $29.99 for an audible subscription that i cancelled during the free trial. Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Post-cancellation subscription billing dispute; escalate to refund.",
+    "reply": "We apologize for the subscription charge! DM us your account email so we can reverse the charge. - Sam",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_164",
+    "text": "Hello, i see a charge of $14.99 from 'amazon prime' on my credit card, but i do not have a prime account! Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "ESCALATE",
+    "reason": "Unrecognized Prime subscription charge; escalate for card lookup.",
+    "reply": "We can help track down which account is linked to that charge. DM us the date and card details. - Jamie",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_165",
+    "text": "Hello, how do i download the official tax invoice pdf for an order i placed last week? Please advise.",
+    "intent": "PAYMENT_BILLING",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Invoice download self-service guidance.",
+    "reply": "You can download invoice PDFs under Your Orders by clicking 'Invoice' on the top right of the order card. - Riley",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_166",
+    "text": "Are items sold by Amazon Warehouse inspected and tested before being resold?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Amazon Warehouse condition FAQ.",
+    "reply": "Yes! Amazon Warehouse items undergo a 20-point quality inspection and are graded from Like New to Acceptable. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_167",
+    "text": "Amazon delivery driver threw the heavy package onto our second-floor balcony and broke our flower pot!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Property damage by delivery personnel; escalate for claims adjuster.",
+    "reply": "We are so sorry for this damage! Please DM us photos of the broken pot and your tracking number. - DSP Management",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_168",
+    "text": "When does the Prime Early Access Sale start this year?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Promotional sale date inquiry.",
+    "reply": "Check amazon.com/primeday for the official event dates and early bird announcements! - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_169",
+    "text": "How do I write a review for a seller without reviewing the product itself?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Seller feedback guidance.",
+    "reply": "You can leave seller feedback under Your Orders by clicking 'Leave Seller Feedback'. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_170",
+    "text": "Your customer service chatbot kept looping me in circles for 45 minutes until I gave up. Fix your bot!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Customer chatbot frustration and service breakdown; escalate.",
+    "reply": "We sincerely apologize for the frustrating experience. DM us what issue you were trying to solve and a human agent will take over! - Alex",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_171",
+    "text": "Hello, are items sold by amazon warehouse inspected and tested before being resold? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Amazon Warehouse condition FAQ.",
+    "reply": "Yes! Amazon Warehouse items undergo a 20-point quality inspection and are graded from Like New to Acceptable. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_172",
+    "text": "Hello, amazon delivery driver threw the heavy package onto our second-floor balcony and broke our flower pot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Property damage by delivery personnel; escalate for claims adjuster.",
+    "reply": "We are so sorry for this damage! Please DM us photos of the broken pot and your tracking number. - DSP Management",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_173",
+    "text": "Hello, when does the prime early access sale start this year? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Promotional sale date inquiry.",
+    "reply": "Check amazon.com/primeday for the official event dates and early bird announcements! - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_174",
+    "text": "Hello, how do i write a review for a seller without reviewing the product itself? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Seller feedback guidance.",
+    "reply": "You can leave seller feedback under Your Orders by clicking 'Leave Seller Feedback'. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_175",
+    "text": "Hello, your customer service chatbot kept looping me in circles for 45 minutes until i gave up. fix your bot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Customer chatbot frustration and service breakdown; escalate.",
+    "reply": "We sincerely apologize for the frustrating experience. DM us what issue you were trying to solve and a human agent will take over! - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_176",
+    "text": "Hello, are items sold by amazon warehouse inspected and tested before being resold? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Amazon Warehouse condition FAQ.",
+    "reply": "Yes! Amazon Warehouse items undergo a 20-point quality inspection and are graded from Like New to Acceptable. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_177",
+    "text": "Hello, amazon delivery driver threw the heavy package onto our second-floor balcony and broke our flower pot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Property damage by delivery personnel; escalate for claims adjuster.",
+    "reply": "We are so sorry for this damage! Please DM us photos of the broken pot and your tracking number. - DSP Management",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_178",
+    "text": "Hello, when does the prime early access sale start this year? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Promotional sale date inquiry.",
+    "reply": "Check amazon.com/primeday for the official event dates and early bird announcements! - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_179",
+    "text": "Hello, how do i write a review for a seller without reviewing the product itself? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Seller feedback guidance.",
+    "reply": "You can leave seller feedback under Your Orders by clicking 'Leave Seller Feedback'. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_180",
+    "text": "Hello, your customer service chatbot kept looping me in circles for 45 minutes until i gave up. fix your bot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Customer chatbot frustration and service breakdown; escalate.",
+    "reply": "We sincerely apologize for the frustrating experience. DM us what issue you were trying to solve and a human agent will take over! - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_181",
+    "text": "Hello, are items sold by amazon warehouse inspected and tested before being resold? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Amazon Warehouse condition FAQ.",
+    "reply": "Yes! Amazon Warehouse items undergo a 20-point quality inspection and are graded from Like New to Acceptable. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_182",
+    "text": "Hello, amazon delivery driver threw the heavy package onto our second-floor balcony and broke our flower pot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Property damage by delivery personnel; escalate for claims adjuster.",
+    "reply": "We are so sorry for this damage! Please DM us photos of the broken pot and your tracking number. - DSP Management",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_183",
+    "text": "Hello, when does the prime early access sale start this year? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Promotional sale date inquiry.",
+    "reply": "Check amazon.com/primeday for the official event dates and early bird announcements! - Robin",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_184",
+    "text": "Hello, how do i write a review for a seller without reviewing the product itself? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Seller feedback guidance.",
+    "reply": "You can leave seller feedback under Your Orders by clicking 'Leave Seller Feedback'. - Pat",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_185",
+    "text": "Hello, your customer service chatbot kept looping me in circles for 45 minutes until i gave up. fix your bot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Customer chatbot frustration and service breakdown; escalate.",
+    "reply": "We sincerely apologize for the frustrating experience. DM us what issue you were trying to solve and a human agent will take over! - Alex",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_186",
+    "text": "Hello, are items sold by amazon warehouse inspected and tested before being resold? Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "AUTO_HANDLE",
+    "reason": "Amazon Warehouse condition FAQ.",
+    "reply": "Yes! Amazon Warehouse items undergo a 20-point quality inspection and are graded from Like New to Acceptable. - Lee",
+    "difficulty": "Standard",
+    "human_score": 4.8
+  },
+  {
+    "id": "gold_187",
+    "text": "Hello, amazon delivery driver threw the heavy package onto our second-floor balcony and broke our flower pot! Please advise.",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "escalation": "ESCALATE",
+    "reason": "Property damage by delivery personnel; escalate for claims adjuster.",
+    "reply": "We are so sorry for this damage! Please DM us photos of the broken pot and your tracking number. - DSP Management",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_188",
+    "text": "The lithium replacement battery I ordered for my drone swelled up, started spewing toxic smoke, and melted the tabletop!",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Battery thermal runaway fire hazard; immediate emergency escalation.",
+    "reply": "Please place the battery in a fireproof container outdoors. DM us immediately with your order ID so our safety team can respond. - Emergency Safety",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_189",
+    "text": "You have 24 hours to credit back my money or my attorney will be serving Amazon with a lawsuit in small claims court.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Explicit legal litigation threat; escalate to legal operations.",
+    "reply": "We take legal notices seriously. Please DM us your order ID and contact details for our legal escalations team. - Legal Response",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_190",
+    "text": "The facial cream I bought caused severe chemical burns on my skin requiring emergency room treatment. Lawsuit incoming.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Medical injury from cosmetic product with legal threat; emergency escalation.",
+    "reply": "We are deeply concerned to hear of your injury. Please DM us your order ID and medical contact details. - Product Safety Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_191",
+    "text": "I am submitting a formal consumer complaint to the FTC and the State Attorney General regarding systematic billing deception.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Formal regulatory agency escalation threat; escalate to executive team.",
+    "reply": "Please DM us your order details and account email so a Senior Executive Specialist can review your case. - Executive Support",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_192",
+    "text": "Hello, the lithium replacement battery i ordered for my drone swelled up, started spewing toxic smoke, and melted the tabletop! Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Battery thermal runaway fire hazard; immediate emergency escalation.",
+    "reply": "Please place the battery in a fireproof container outdoors. DM us immediately with your order ID so our safety team can respond. - Emergency Safety",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_193",
+    "text": "Hello, you have 24 hours to credit back my money or my attorney will be serving amazon with a lawsuit in small claims court. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Explicit legal litigation threat; escalate to legal operations.",
+    "reply": "We take legal notices seriously. Please DM us your order ID and contact details for our legal escalations team. - Legal Response",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_194",
+    "text": "Hello, the facial cream i bought caused severe chemical burns on my skin requiring emergency room treatment. lawsuit incoming. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Medical injury from cosmetic product with legal threat; emergency escalation.",
+    "reply": "We are deeply concerned to hear of your injury. Please DM us your order ID and medical contact details. - Product Safety Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_195",
+    "text": "Hello, i am submitting a formal consumer complaint to the ftc and the state attorney general regarding systematic billing deception. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Formal regulatory agency escalation threat; escalate to executive team.",
+    "reply": "Please DM us your order details and account email so a Senior Executive Specialist can review your case. - Executive Support",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_196",
+    "text": "Hello, the lithium replacement battery i ordered for my drone swelled up, started spewing toxic smoke, and melted the tabletop! Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Battery thermal runaway fire hazard; immediate emergency escalation.",
+    "reply": "Please place the battery in a fireproof container outdoors. DM us immediately with your order ID so our safety team can respond. - Emergency Safety",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_197",
+    "text": "Hello, you have 24 hours to credit back my money or my attorney will be serving amazon with a lawsuit in small claims court. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Explicit legal litigation threat; escalate to legal operations.",
+    "reply": "We take legal notices seriously. Please DM us your order ID and contact details for our legal escalations team. - Legal Response",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_198",
+    "text": "Hello, the facial cream i bought caused severe chemical burns on my skin requiring emergency room treatment. lawsuit incoming. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Medical injury from cosmetic product with legal threat; emergency escalation.",
+    "reply": "We are deeply concerned to hear of your injury. Please DM us your order ID and medical contact details. - Product Safety Team",
+    "difficulty": "Standard",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_199",
+    "text": "Hello, i am submitting a formal consumer complaint to the ftc and the state attorney general regarding systematic billing deception. Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Formal regulatory agency escalation threat; escalate to executive team.",
+    "reply": "Please DM us your order details and account email so a Senior Executive Specialist can review your case. - Executive Support",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  },
+  {
+    "id": "gold_200",
+    "text": "Hello, the lithium replacement battery i ordered for my drone swelled up, started spewing toxic smoke, and melted the tabletop! Please advise.",
+    "intent": "URGENT_SAFETY_LEGAL",
+    "escalation": "ESCALATE",
+    "reason": "Battery thermal runaway fire hazard; immediate emergency escalation.",
+    "reply": "Please place the battery in a fireproof container outdoors. DM us immediately with your order ID so our safety team can respond. - Emergency Safety",
+    "difficulty": "Challenging",
+    "human_score": 4.9
+  }
+]
